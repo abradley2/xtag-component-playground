@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watchify -t stringify src/main.js -o public/main.bundle.js",
-    "build": "browserify -t stringify src/main.js -o public/main.bundle.js"
+    "watch": "watchify -t stringify src/main.js -o public/main.js & gulp watch-styles",
+    "build": "browserify -t stringify src/main.js -o public/main.js & gulp build-styles"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   "homepage": "https://github.com/abradley2/xtag-component-playground",
   "devDependencies": {
     "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-stylus": "^2.3.1",
     "stringify": "^5.1.0",
     "watchify": "^3.7.0"
   }
